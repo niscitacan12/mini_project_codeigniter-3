@@ -180,9 +180,7 @@
                     <?php endforeach; ?> 
                 </select> 
             </div> 
-            <div class="mb-3 col-12"> 
                     <button type="submit" class="btn btn-primary">Tambah</button> 
-                </div> 
         </form> 
     </div>
     </div>
