@@ -46,5 +46,29 @@ class Auth extends CI_Controller {
 		$this->session->sess_destroy(); // Menggunakan sess_destroy() untuk mengakhiri sesi
 		redirect(base_url('auth'));
 	}
+	public function register()
+    {
+        $this->load->view('auth/register');
+    }
+
+    public function aksi_register()
+    {
+        $email = $this->input->post('email', true);
+        $username = $this->input->post('username', true);
+        $password = md5($this->input->post('password', true));
+        $role = 'admin'; // Sesuaikan dengan role yang diinginkan
+
+        $data = [
+            'email' => $email,
+            'username' => $username,
+            'password' => $password,
+            'role' => $role,
+        ];
+
+        // Simpan data ke database
+        $this->m_model->tambah_data('admin', $data);
+
+        redirect(base_url() . 'auth/login');
+    }
 	
 }
