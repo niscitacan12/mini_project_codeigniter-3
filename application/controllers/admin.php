@@ -49,37 +49,37 @@ class admin extends CI_Controller
 
     public function update_siswa($id)
     {
-        $data['siswa'] = $this->m_model->get_by_id('siswa', 'id_siswa', $id)->row_array();
+        $data['siswa'] = $this->m_model->get_by_id('siswa', 'id_siswa', $id)->result();
         $data['kelas'] = $this->m_model->get_data('kelas')->result();
         $this->load->view('admin/update_siswa', $data);
-    }
+    }    
     
-    public function aksi_update_siswa()
-    {
-        $data = array (
-            'nama_siswa' => $this->input->post('nama'),
-            'nisn' => $this->input->post('nisn'),
-            'gender' => $this->input->post('gender'),
-            'id_kelas' => $this->input->post('kelas'),
-        );
+        public function aksi_update_siswa()
+        {
+            $data = array (
+                'nama_siswa' => $this->input->post('nama_siswa'),
+                'nisn' => $this->input->post('nisn'),
+                'gender' => $this->input->post('gender'),
+                'id_kelas' => $this->input->post('id_kelas'), // Perubahan disini
+            );
         
-        $eksekusi = $this->m_model->ubah_data
-            ('siswa',
-            $data,
-            array('id_siswa' => $this->input->post('id_siswa'))
-    );
-    
-        if ($eksekusi)
-        {
-            $this->session->set_flashdata('sukses', 'berhasil');
-            redirect(base_url('admin/siswa'));
+            $eksekusi = $this->m_model->ubah_data(
+                'siswa',
+                $data,
+                array('id_siswa' => $this->input->post('id_siswa'))
+            );
+        
+            if ($eksekusi)
+            {
+                $this->session->set_flashdata('sukses', 'berhasil');
+                redirect(base_url('admin/siswa'));
+            }
+            else
+            {
+                $this->session->set_flashdata('error', 'gagal');
+                redirect(base_url('admin/update_siswa/'.$this->input->post('id_siswa')));  
+            }
         }
-        else
-        {
-            $this->session->set_flashdata('error', 'gagal');
-            redirect(base_url('admin/update_siswa/'.$this->input->post('id_siswa')));  
-        }
-    }
     
     // hapus 
 	public function hapus_siswa($id)
