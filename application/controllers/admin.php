@@ -75,13 +75,14 @@ class admin extends CI_Controller
         $data['siswa'] = $this->m_model->get_by_id('siswa', 'id_siswa', $id)->result();
         $data['kelas'] = $this->m_model->get_data('kelas')->result();
         $this->load->view('admin/update_siswa', $data);
-    }    
+    } 
+
     public function ubah_guru($id)
     {
         $data['guru'] = $this->m_model->get_by_id('guru', 'id_guru', $id)->result();
         $data['guru'] = $this->m_model->get_data('guru')->result();
         $this->load->view('admin/ubah_guru', $data);
-    }    
+    }
     
         public function aksi_update_siswa()
         {
@@ -109,6 +110,7 @@ class admin extends CI_Controller
                 redirect(base_url('admin/update_siswa/'.$this->input->post('id_siswa')));  
             }
         }
+
         public function aksi_ubah_guru()
         {
             $data = array (
@@ -136,7 +138,7 @@ class admin extends CI_Controller
 
             $this->load->view('admin/guru');
         }
-    
+        
     // hapus 
 	public function hapus_siswa($id)
 	{

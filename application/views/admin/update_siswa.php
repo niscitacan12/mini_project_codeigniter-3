@@ -28,12 +28,20 @@
             <form class="row" action="<?php echo base_url('admin/aksi_update_siswa'); ?>" enctype="multipart/form-data"
                 method="post">
                 <div class="mb-3 col-6">
+<<<<<<< HEAD
                     <label for="nama_siswa" class="form-label">Nama Guru</label>
+=======
+                    <label for="nama_siswa" class="form-label">Nama Siswa</label>
+>>>>>>> ddb581765a13eae724c9d13707af1210db95a105
                     <input type="text" class="form-control" id="nama_siswa" name="nama_siswa"
                         value="<?php echo $data_siswa->nama_siswa ?>">
                 </div>
                 <div class="mb-3 col-6">
+<<<<<<< HEAD
                     <label for="nisn" class="form-label">NIK</label>
+=======
+                    <label for="nisn" class="form-label">NISN</label>
+>>>>>>> ddb581765a13eae724c9d13707af1210db95a105
                     <input type="text" class="form-control" id="nisn" name="nisn"
                         value="<?php echo $data_siswa->nisn ?>">
                 </div>
