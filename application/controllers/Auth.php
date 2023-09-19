@@ -20,23 +20,59 @@ class Auth extends CI_Controller {
         $this->load->view('auth/register');
     }
 
-    public function aksi_register()
-    {
-        $email = $this->input->post('email', true);
-        $username = $this->input->post('username', true);
-        $password = md5($this->input->post('password', true));
-        $role = 'admin'; // Sesuaikan dengan role yang diinginkan
-        $data = [
-            'email' => $email,
-            'username' => $username,
-            'password' => $password,
-            'role' => $role,
-        ];
-
-        // Simpan data ke database
-        $this->m_model->tambah_data('admin', $data);
-
-        redirect(base_url() . 'auth/login');
-    }
+	public function aksi_register()
+	{
+		$email = $this->input->post('email', true);
+		$username = $this->input->post('username', true);
+		$password = md5($this->input->post('password', true));
+		$data = ['email' => $email]; // Perbaiki di sini, hapus koma ekstra
 	
+		$query = $this->m_model->getwhere('admin', $data);
+		$result = $query->row_array();
+	
+		if  (!empty($result) && md5($password) === $result['password']) {
+			$data = [
+				'logged_in' => TRUE,
+				'email' => $result['email'],
+				'username' => $result['username'],
+				'password' => $result['password'],
+				'role' => $result['role'],
+				'id' => $result['id'],
+			]; // Perbaiki di sini, tambahkan tanda koma
+	
+			$this->session->set_userdata($data);
+			if ($this->session->userdata('role') == 'admin') {
+				redirect(base_url()."admin");
+			} else {
+				redirect(base_url()."auth");
+			}
+		}
+	}
+	
+	public function aksi_login()
+	{
+		$email = $this->input->post('email', true);
+		$password = $this->input->post('password', true);
+		$data = ['email' => $email]; // Perbaiki di sini, hapus koma ekstra
+	
+		$query = $this->m_model->getwhere('admin', $data);
+		$result = $query->row_array();
+	
+		if (!empty($result) && md5($password) === $result['password']) {
+			$data = [
+				'logged_in' => TRUE,
+				'email' => $result['email'],
+				'username' => $result['username'],
+				'role' => $result['role'],
+				'id' => $result['id'],
+			]; // Perbaiki di sini, tambahkan tanda koma
+	
+			$this->session->set_userdata($data);
+			if ($this->session->userdata('role') == 'admin') {
+				redirect(base_url()."admin");
+			} else {
+				redirect(base_url()."auth");
+			}
+		} 
+	}			
 }

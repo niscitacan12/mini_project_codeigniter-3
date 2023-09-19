@@ -24,7 +24,7 @@
     <h2 class="text-center pt-3 text-primary">login </h2> 
 </div> 
    
-<form action="<?php echo base_url(); ?>auth/aksi_login" method="post" class="space-y-12"> 
+<form action="<?php echo base_url(); ?>Auth/aksi_login" method="post" class="space-y-12"> 
     <div class="card-body"> 
     <div class="mb-3"> 
     <label for="exampleInputEmail1" class="form-label">Email </label> 
@@ -43,7 +43,7 @@
  <button type="submit" class="btn btn-primary">LOGIN</button> 
  </div> 
  <br>  
-          <p class="text-center"> belum punya akun? <a href="./auth">register akun</a></p> 
+          <p class="text-center">don't have an account yet? <a href="./auth">register account</a></p> 
         <br>  
         </form> 
         </div> 

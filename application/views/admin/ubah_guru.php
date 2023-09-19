@@ -14,7 +14,7 @@
     <div class="card w-50 m-auto p-3">
         <div class="navbar">
             <span class="openbtn" onclick="openNav()">&#9776;</span>
-            <h3 class="text-center text-white">Data Siswa</h3>
+            <h3 class="text-center text-white">Data Guru</h3>
             <div class="search-container">
                 <input type="text" class="search-box" placeholder="Cari...">
                 <button type="submit">Cari</button>
@@ -24,24 +24,24 @@
         <!-- Konten -->
         <div class="content">
             <h3 class="text-center">Update</h3>
-            <?php foreach($siswa as $data_siswa): ?>
-            <form class="row" action="<?php echo base_url('admin/aksi_update_siswa'); ?>" enctype="multipart/form-data"
+            <?php foreach($guru as $data_guru): ?>
+            <form action="<?php echo base_url('admin/aksi_ubah_guru'); ?>" enctype="multipart/form-data"
                 method="post">
                 <div class="mb-3 col-6">
-                    <label for="nama_siswa" class="form-label">Nama Guru</label>
-                    <input type="text" class="form-control" id="nama_siswa" name="nama_siswa"
-                        value="<?php echo $data_siswa->nama_siswa ?>">
+                    <label for="nama_Guru" class="form-label">Nama Guru</label>
+                    <input type="text" class="form-control" id="nama_Guru" name="nama_Guru"
+                        value="<?php echo $data_guru->nama_Guru ?>">
                 </div>
                 <div class="mb-3 col-6">
-                    <label for="nisn" class="form-label">NIK</label>
+                    <label for="nisn" class="form-label">NISN</label>
                     <input type="text" class="form-control" id="nisn" name="nisn"
-                        value="<?php echo $data_siswa->nisn ?>">
+                        value="<?php echo $data_guru->nisn ?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="gender" class="form-label">Gender</label>
                     <select id="gender" name="gender" class="form-select">
-                        <option selected value="<?php echo $data_siswa->gender ?>">
-                            <?php echo $data_siswa->gender ?>
+                        <option selected value="<?php echo $data_guru->gender ?>">
+                            <?php echo $data_guru->gender ?>
                         </option>
                         <option value="Laki-Laki">Laki-Laki</option>
                         <option value="Perempuan">Perempuan</option>
@@ -49,17 +49,17 @@
                 </div>
                 <div class="mb-3 col-6">
                     <label for="kelas" class="form-label">Kelas</label>
-                    <select name="id_kelas" class="form-select">
-                        <option selected value="<?php echo $data_siswa->id_kelas ?>">
-                            <?php echo tampil_full_kelas_byid($data_siswa->id_kelas) ?></option>
-                        <?php foreach ($kelas as $row) : ?>
+                    <select name="id_kelas" id="kelas"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option selected>Pilih Kelas</option>
+                        <?php foreach($kelas as $row): ?>
                         <option value="<?php echo $row->id ?>">
-                            <?php echo $row->tingkat_kelas . ' ' . $row->jurusan_kelas ?>
-                        </option>
+                            <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?></option>
+                        <?php endforeach ?>
                     </select>
                 </div>
                 <div class="mb-3 col-12">
-                    <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa; ?>">
+                    <input type="hidden" name="id_guru" value="<?php echo $data_guru->id; ?>">
                     <button type="submit" class="btn btn-primary">Ubah</button>
                 </div>
             </form>

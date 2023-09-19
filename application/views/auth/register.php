@@ -13,10 +13,15 @@
     <div class="container py-5">
         <div class="card w-50 justify-content-center mx-auto bq-light">
             <div class= "header">
+                <div class="jumbotron text-center">
+            <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" alt="image" height="200px" width="250px" >
+        </div>
+        <div style="text-align: center;">
+        <h1>SMK Bina Nusantara</h1>  
             <h2 class="text-center pt-3">Register</h2>
         </div>
-
-        <form action="<?php echo base_url(); ?>auth/aksi_register" method="post" class="space-y-12"> 
+        </div>
+        <form action="<?php echo base_url(); ?>Auth/aksi_register" method="post" class="space-y-12"> 
                 <div class="card-body">
                     <div class="mb -3">
                     <label for="exampleInputEmail1" class="form-label">Email </label> 
@@ -29,7 +34,7 @@
                 <div class="text-center pb-3">
                 <button type="submit" class="btn btn-primary">REGISTER</button>
             </div>
-          <p class="text-center">sudah punya akun? <a href="login.php">login akun</a></p>
+          <p class="text-center">already have an account? <a href="login.php">account login</a></p>
             </form>
         </div>
     </div>
