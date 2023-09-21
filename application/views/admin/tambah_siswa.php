@@ -180,7 +180,7 @@
                     <?php endforeach; ?> 
                 </select> 
             </div>
-           
+            <button type="submit" class="btn btn-warning"><a href class="btn text-primary">Tambah</a></button> 
         </form> 
     </div>
     </div>

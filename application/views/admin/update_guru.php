@@ -15,27 +15,23 @@
         <div class="navbar">
             <span class="openbtn" onclick="openNav()">&#9776;</span>
             <h3 class="text-center text-white">Data Guru</h3>
-            <div class="search-container">
-                <input type="text" class="search-box" placeholder="Cari...">
-                <button type="submit">Cari</button>
-            </div>
         </div>
 
         <!-- Konten -->
         <div class="content">
-            <h3 class="text-center">Update</h3>
+            <h3 class="text-center">Ubah Guru</h3>
             <?php foreach($guru as $data_guru): ?>
-            <form action="<?php echo base_url('admin/aksi_ubah_guru'); ?>" enctype="multipart/form-data"
+            <form action="<?php echo base_url('admin/aksi_update_guru'); ?>" enctype="multipart/form-data"
                 method="post">
                 <div class="mb-3 col-6">
-                    <label for="nama_Guru" class="form-label">Nama Guru</label>
-                    <input type="text" class="form-control" id="nama_Guru" name="nama_Guru"
-                        value="<?php echo $data_guru->nama_Guru ?>">
+                    <label for="nama_guru" class="form-label">Nama Guru</label>
+                    <input type="text" class="form-control" id="nama_guru" name="nama_guru"
+                        value="<?php echo $data_guru->nama_guru ?>">
                 </div>
                 <div class="mb-3 col-6">
-                    <label for="nisn" class="form-label">NISN</label>
-                    <input type="text" class="form-control" id="nisn" name="nisn"
-                        value="<?php echo $data_guru->nisn ?>">
+                    <label for="nik" class="form-label">NIK</label>
+                    <input type="text" class="form-control" id="nik" name="nik"
+                        value="<?php echo $data_guru->nik ?>">
                 </div>
                 <div class="mb-3 col-6">
                     <label for="gender" class="form-label">Gender</label>
@@ -48,7 +44,7 @@
                     </select>
                 </div>
                 <div class="mb-3 col-12">
-                    <input type="hidden" name="id_guru" value="<?php echo $data_guru->id; ?>">
+                    <input type="hidden" name="id" value="<?php echo $data_guru->id; ?>">
                     <button type="submit" class="btn btn-primary">Ubah</button>
                 </div>
             </form>

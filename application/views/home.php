@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
      <style>
             body {
-                background-image : url('https://www.mysch.id/cms_web/upload/picture/profil-sekolah-smk.png');
+                background-image : url('https://foto.data.kemdikbud.go.id/getImage/20328986/7.jpg');
                 background-size : cover;
                 background-repeat : no-repeat;
-                background-attachment : fixed;
-                
+                background-attachment : fixed;   
+
             }
         </style>
 </head>
-<body>
-    <header class="bg-primary text-white text-center py-4">
+<body class="background">
+    <header class="text-white text-center py-4">
     <div class="text-center">
          <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" alt="image" height="200px" width="250px" >
         </div>
@@ -28,11 +28,11 @@
     </nav>
     <main class="container mt-4">
         <section class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-white" >
                 <h2>Tentang SMK</h2>
                 <h3>SMK Bina Nusantara cerdas, cermat, kreatif, berakhlak baik, mandiri, </h3>
         </section>
-        <section class="mt-4">
+        <section class="mt-4 text-white" >
             <h2>SMK Bina Nusantara Mranggen</h2>
             <ul>
                 <li>jurusan SMK cocok untuk siswa perempuan</li>
@@ -46,7 +46,7 @@
         </div>
     </main>
     <footer class="bg-dark text-white text-center py-3 mt-4">
-        &copy; 2023 - 2024
+        &copy; 2023 - 2024 SMK Bina Nusantara
     </footer>
 
     <!-- Menggunakan Bootstrap JS dari CDN (opsional, hanya jika Anda memerlukan komponen Bootstrap yang interaktif) -->

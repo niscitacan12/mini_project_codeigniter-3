@@ -48,6 +48,11 @@ class Auth extends CI_Controller {
 			}
 		}
 	}
+
+	public function login()
+    {
+        $this->load->view('auth/login');
+    }
 	
 	public function aksi_login()
 	{
@@ -72,7 +77,13 @@ class Auth extends CI_Controller {
 				redirect(base_url()."admin");
 			} else {
 				redirect(base_url()."auth");
-			}
+			}		
 		} 
-	}			
+	}
+	
+	function logout()
+    {
+        $this->session->sess_destroy();
+        redirect(base_url('auth/login'));
+    }
 }
