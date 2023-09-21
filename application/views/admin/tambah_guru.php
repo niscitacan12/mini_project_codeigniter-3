@@ -14,17 +14,6 @@
 <div class="navbar"> 
         <span class="openbtn" onclick="openNav()">&#9776;</span> 
         <h3 class="text-center text-white">Data Siswa</h3> 
-        <div class="search-container"> 
-            <input type="text" class="search-box" placeholder="Cari..."> 
-            <button type="submit">Cari</button> 
-        </div> 
-    </div> 
- 
-    <!-- Side Navbar (Samping) --> 
-    <div class="sidenav" id="mySidenav"> 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; tutup</a> 
-        <a href="<?php echo base_url('admin') ?>">Beranda</a> 
-        <a href="<?php echo base_url('admin/guru') ?>">Guru</a>  
     </div> 
  
     <!-- Konten --> 
@@ -47,7 +36,6 @@
                     <option value="" selected>Pilih Gender</option> 
                     <option value="Laki-Laki">Laki-Laki</option> 
                     <option value="Perempuan">Perempuan</option> 
-                    <?php endforeach; ?> 
                 </select> 
             </div> 
            

@@ -47,17 +47,6 @@
                         <option value="Perempuan">Perempuan</option>
                     </select>
                 </div>
-                <div class="mb-3 col-6">
-                    <label for="kelas" class="form-label">Kelas</label>
-                    <select name="id_kelas" id="kelas"
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <option selected>Pilih Kelas</option>
-                        <?php foreach($kelas as $row): ?>
-                        <option value="<?php echo $row->id ?>">
-                            <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
                 <div class="mb-3 col-12">
                     <input type="hidden" name="id_guru" value="<?php echo $data_guru->id; ?>">
                     <button type="submit" class="btn btn-primary">Ubah</button>

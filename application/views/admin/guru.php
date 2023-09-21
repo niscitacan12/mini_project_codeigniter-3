@@ -30,10 +30,6 @@
                     </li>
 
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -96,15 +92,6 @@
         </div>
 
     </div>
-    <script>
-    function hapus(id) {
-        var yes = confirm('Yakin DI Hapus?');
-        if (yes == true) {
-            window.location.href = "<?php echo base_url('admin/hapus_guru/') ?>" + id;
-        }
-    }
-    </script>
-
     <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
