@@ -80,13 +80,21 @@
             </table> 
             <button class="btn btn-sm btn-warning"><a href="Tambah_guru" class="btn text-primary">Tambah</a> 
             </button> 
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
             <script> 
             function hapus(id) { 
-                var yes = confirm('Yakin Di Hapus?'); 
-                if (yes == true) { 
-                    window.location.href = "<?php echo base_url('admin/hapus_guru/')?>" + id; 
- 
-                } 
+                Swal.fire({ 
+                    title: 'Apakah Anda Yakin Ingin Menghapusnya?', 
+                    icon: 'warning', 
+                    showCancelButton: true, 
+                    confirmButtonColor: '#3085d6', 
+                    cancelButtonColor: '#d33', 
+                    confirmButtonText: 'Ya, Di Hapus!' 
+                }).then((result) => { 
+                    if (result.isConfirmed) { 
+                        window.location.href = "<?php echo base_url('admin/hapus_guru/') ?>" + id; 
+                    } 
+                }); 
             } 
             </script> 
         </div>

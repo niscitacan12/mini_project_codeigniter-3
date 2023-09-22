@@ -9,14 +9,14 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
     .card { 
-        background-color: #20B2AA; 
+        background-color: #20c997; 
         border: 1px solid #ccc; 
-        border-radius: 2px; 
+        border-radius: 50px; 
         padding: 10px; 
         margin: 5px; 
         width: 150px; 
         display: inline-block; 
-        color: white; 
+        color: black; 
         margin-left: 0; 
         transition: margin-left 0.5s; 
     } 
@@ -31,8 +31,8 @@
     .login-button { 
         display: inline-block; 
         padding: 10px 20px; 
-        background-color: #008B8B; 
-        color: #fff; 
+        background-color: #6610f2; 
+        color: #f8f9fa; 
  
         text-decoration: none; 
         text-align: center; 

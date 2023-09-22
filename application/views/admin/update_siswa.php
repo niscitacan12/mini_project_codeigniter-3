@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .card { 
+        background-color: #20c997; 
+        border: 1px solid #ccc; 
+        border-radius: 70px; 
+        padding: 10px; 
+        margin: 5px; 
+        width: 150px; 
+        display: inline-block; 
+        color: white; 
+        margin-left: 0; 
+        transition: margin-left 0.5s; 
+    } 
+    </style>
 </head>
 <body class="min-vh-100 d-flex align-items-center">
     <div class='card w-50 m-auto p-3'>
@@ -23,13 +37,13 @@
                 <input type="text" class="form-control" id="nisn" name="nisn" value="<?php echo $data_siswa->nisn; ?>">
             </div>
             <div class="mb-3 col-6"> 
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="kelas"> 
+                        <label class="form-label" for="kelas"> 
                             Kelas 
                         </label> 
                         <select name="kelas" id="kelas" 
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"> 
+                            class="form-select"> 
                             <option selected value="<?php echo $data_siswa->id_kelas ?>">Pilih Kelas</option> 
-                            <?php echo tampilan _full_kelas_byid($data_siswa->id_kelas) ?> 
+                            <?php echo tampilan_full_kelas_byid($data_siswa->id_kelas) ?> 
                             </option> 
                             <?php foreach($kelas as $row): ?> 
                             <option value="<?php echo $row->id ?>"> 

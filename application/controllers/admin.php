@@ -85,7 +85,7 @@ class admin extends CI_Controller
     public function update_guru($id)
     {
         $data['guru'] = $this->m_model->get_by_id('guru', 'id', $id)->result();
-        $data['guru'] = $this->m_model->get_data('guru')->result();
+        // $data['guru'] = $this->m_model->get_data('guru')->result();
         $this->load->view('admin/update_guru', $data);
     }
     
@@ -151,6 +151,7 @@ class admin extends CI_Controller
     public function hapus_guru($id)
     {
         $this->m_model->delete('guru', 'id', $id);
+        $this->session->set_flashdata('success', 'guru berhasil dihapus!');     
         redirect(base_url('admin/guru'));
     }
 }    

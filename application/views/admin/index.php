@@ -75,19 +75,19 @@
     'username'
 ); ?></h1>
     <div class="flex space-x-4 p-2 my-5" style="margin-left: 300px;">
-        <div class="w-1/4 bg-teal-600 p-4 text-stone-50 rounded-lg shadow-md">
+        <div class="w-1/4 bg-blue-600 p-4 text-stone-50 rounded-lg shadow-md">
         <p>Jumlah Kelas</p><br>
         <h1 class="text-4xl font-bold"><?php echo $kelas;?></h1>
     </div>
-        <div class="w-1/4 bg-teal-600 p-4 text-stone-50  rounded-lg shadow-md">
+        <div class="w-1/4 bg-blue-600 p-4 text-stone-50  rounded-lg shadow-md">
             <p>Jumlah Mapel</p>
             <h1 class="text-4xl font-bold"><?php echo $mapel;?></h1>
         </div>
-        <div class="w-1/4 bg-teal-600 text-stone-50  p-4 rounded-lg shadow-md">
+        <div class="w-1/4 bg-blue-600 text-stone-50  p-4 rounded-lg shadow-md">
             <p>Jumlah Siswa</p>
             <h1 class="text-4xl font-bold"><?php echo $siswa;?></h1>
         </div>
-        <div class="w-1/4 bg-teal-600 text-stone-50  p-4 rounded-lg shadow-md">
+        <div class="w-1/4 bg-blue-600 text-stone-50  p-4 rounded-lg shadow-md">
             <p>Jumlah Guru</p>
             <h1 class="text-4xl font-bold"><?php echo $siswa;?></h1>
         </div>

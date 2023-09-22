@@ -7,13 +7,25 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <style>
+         .card { 
+        background-color: #6f42c1; 
+        border: 1px solid #ccc; 
+        border-radius: 70px; 
+        padding: 10px; 
+        margin: 5px; 
+        width: 150px; 
+        display: inline-block; 
+        color: white; 
+        margin-left: 0; 
+        transition: margin-left 0.5s; 
+    } 
+    </style>
 </head>
 
-<body>
+<body class="min-vh-100 d-flex align-items-center">
     <div class="card w-50 m-auto p-3">
         <div class="navbar">
-            <span class="openbtn" onclick="openNav()">&#9776;</span>
             <h3 class="text-center text-white">Data Guru</h3>
         </div>
 
@@ -23,17 +35,17 @@
             <?php foreach($guru as $data_guru): ?>
             <form action="<?php echo base_url('admin/aksi_update_guru'); ?>" enctype="multipart/form-data"
                 method="post">
-                <div class="mb-3 col-6">
+                <div class="mb-3 col-6 text-center">
                     <label for="nama_guru" class="form-label">Nama Guru</label>
                     <input type="text" class="form-control" id="nama_guru" name="nama_guru"
                         value="<?php echo $data_guru->nama_guru ?>">
                 </div>
-                <div class="mb-3 col-6">
+                <div class="mb-3 col-6 text-center">
                     <label for="nik" class="form-label">NIK</label>
                     <input type="text" class="form-control" id="nik" name="nik"
                         value="<?php echo $data_guru->nik ?>">
                 </div>
-                <div class="mb-3 col-6">
+                <div class="mb-3 col-6 text-center">
                     <label for="gender" class="form-label">Gender</label>
                     <select id="gender" name="gender" class="form-select">
                         <option selected value="<?php echo $data_guru->gender ?>">

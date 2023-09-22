@@ -42,7 +42,7 @@
         </section>
         <div class= "jumbotron text-center">
         <a class="btn btn-danger" href="./auth" role="button">Register</a>
-        <a class="btn btn-warning" href="./auth" role="button">Login</a>
+        <a class="btn btn-warning" href="./auth/login" role="button">Login</a>
         </div>
     </main>
     <footer class="bg-dark text-white text-center py-3 mt-4">
