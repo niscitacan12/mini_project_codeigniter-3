@@ -21,14 +21,14 @@
     </style>
 </head>
 <body class="min-vh-100 d-flex align-items-center">
-    <div class='card w-50 m-auto p-3'>
+    <div class="card w-50 m-auto p-3">
         <h3 class="text-center">Ubah Siswa</h3>
         <?php foreach ($siswa as $data_siswa): ?>
         <form action="<?php echo base_url(
             'admin/aksi_update_siswa'
         ); ?>" enctype="multipart/form-data" method="post" class="row">
         <input name="id_siswa" type="hidden" value="<?php echo $data_siswa->id_siswa; ?>">    
-        <div class="mb-3 col-6">
+            <div class="mb-3 col-6">
                 <label for="nama" class="form-label">Nama Siswa</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data_siswa->nama_siswa; ?>">
             </div>

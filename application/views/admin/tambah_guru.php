@@ -9,14 +9,14 @@
 
     <style>
     .card { 
-        background-color: #6f42c1; 
+        background-color: #212529; 
         border: 1px solid #ccc; 
         border-radius: 50px; 
         padding: 10px; 
         margin: 5px; 
         width: 150px; 
         display: inline-block; 
-        color: black; 
+        color: white; 
         margin-left: 0; 
         transition: margin-left 0.5s; 
     } 
@@ -159,7 +159,7 @@
                     <option value="Perempuan">Perempuan</option> 
                 </select> 
             </div> 
-            <button type="submit" class="btn btn-warning"><a href class="btn text-primary">Tambah</a></button> 
+            <button type="submit" class="btn btn-dark"><a href class="btn text-success">Tambah</a></button> 
         </form> 
     </div>
     </div>

@@ -19,27 +19,22 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="<?php echo base_url(
-              'auth/logout'
-          ); ?>" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</a>
-        </li>
+    <!-- <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+     <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> 
+        <li> 
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a> 
+        </li> 
+        <li> 
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a> 
+        </li> 
+        <li> 
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a> 
+        </li> 
+        <li> 
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a> 
+        </li> 
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 
@@ -68,17 +63,24 @@
             <i class="fa-solid fa-graduation-cap fa-xl"></i>
                <span class="flex-1 ml-3 whitespace-nowrap">Data Guru</span>
          </li>
+         <li> 
+    <!-- Replaced "Logout" text with a small and transparent image --> 
+             <a href="<?php echo base_url('auth/logout')?>"> 
+                <img src="https://png.pngtree.com/png-vector/20190505/ourmid/pngtree-vector-logout-icon-png-image_1022628.jpg" alt="Logout" style="width: 20px; opacity: 0.5;" /> 
+             </a> 
+             Logout
+         </li>
       </ul>
    </div>
 </aside>
-<h1 class="text-5xl font-bold" style="margin-left: 300px;">Dashboard Akademik <?php echo $this->session->userdata(
+<h1 class="text-5xl font-bold" style="margin-left: 500px;">Dashboard Akademik <?php echo $this->session->userdata(
     'username'
 ); ?></h1>
-    <div class="flex space-x-4 p-2 my-5" style="margin-left: 300px;">
-        <div class="w-1/4 bg-blue-600 p-4 text-stone-50 rounded-lg shadow-md">
-        <p>Jumlah Kelas</p><br>
-        <h1 class="text-4xl font-bold"><?php echo $kelas;?></h1>
-    </div>
+    <div class="flex space-x-4 p-2 my-5" style="margin-left: 500px;">
+    <div class="w-1/4 bg-blue-600 p-4 text-stone-50  rounded-lg shadow-md">
+            <p>Jumlah Kelas</p>
+            <h1 class="text-4xl font-bold"><?php echo $kelas;?></h1>
+        </div>
         <div class="w-1/4 bg-blue-600 p-4 text-stone-50  rounded-lg shadow-md">
             <p>Jumlah Mapel</p>
             <h1 class="text-4xl font-bold"><?php echo $mapel;?></h1>
@@ -89,7 +91,7 @@
         </div>
         <div class="w-1/4 bg-blue-600 text-stone-50  p-4 rounded-lg shadow-md">
             <p>Jumlah Guru</p>
-            <h1 class="text-4xl font-bold"><?php echo $siswa;?></h1>
+            <h1 class="text-4xl font-bold"><?php echo $guru;?></h1>
         </div>
     </div>
 

@@ -37,9 +37,11 @@
     <!-- Konten -->
     <!-- Tabel -->
     <div class="content">
-    <div class="container table-container"> 
+    <div class="container table-container">
             <table class="table table-striped"> 
-            <h1>Data Siswa</h1>
+            <h1 class="text-center">Data Siswa</h1>
+            <button class="btn btn-sm btn-warning"><a href="Tambah_siswa" class="btn text-primary">Tambah</a> 
+            </button> 
                 <thead> 
                     <tr> 
                         <th>No</th> 
@@ -80,8 +82,7 @@
                 </tbody> 
             </table> 
             </table> 
-            <button class="btn btn-sm btn-warning"><a href="Tambah_siswa" class="btn text-primary">Tambah</a> 
-            </button> 
+           
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
             <script> 
             function hapus(id) { 
@@ -110,8 +111,6 @@
             }); 
             </script> 
             <?php endif; ?>
-        </div>
-
     </div>
 
     <script>

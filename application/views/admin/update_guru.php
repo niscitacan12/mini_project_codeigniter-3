@@ -9,14 +9,14 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
          .card { 
-        background-color: #6f42c1; 
+        background-color: #adb5bd; 
         border: 1px solid #ccc; 
-        border-radius: 70px; 
+        border-radius: 60px; 
         padding: 10px; 
         margin: 5px; 
         width: 150px; 
         display: inline-block; 
-        color: white; 
+        color: black; 
         margin-left: 0; 
         transition: margin-left 0.5s; 
     } 
