@@ -23,13 +23,14 @@ class admin extends CI_Controller
         $this->load->view('admin/index', $data);
     }
 
+    // bagian siswa
     public function siswa()
     {
         $data['siswa'] = $this->m_model->get_data('siswa')->result();
         $this->load->view('admin/siswa', $data);
     }
 
-
+    // bagian guru
     public function guru()
     {
         $data['guru'] = $this->m_model->get_data('guru')->result();

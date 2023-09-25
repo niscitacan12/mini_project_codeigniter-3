@@ -131,16 +131,12 @@
 
 </head>
 <body class='min-vh-100 d-flex align-items-center'>
-<div class="card w-50 m-auto p-3"> 
-<div class="navbar"> 
-        <span class="openbtn" onclick="openNav()">&#9776;</span> 
-        <h3 class="text-center text-white">Data Siswa</h3> 
-    </div>  
+<div class="card w-50 m-auto p-3">  
  
     <!-- Konten --> 
     <div class="content">
         <h3 class="text-center">Tambah Guru</h3> 
-        <form  action = "<?php echo base_url('admin/aksi_tambah_guru')?>" 
+        <form  action = "<?php echo base_url('admin/aksi_tambah_guru')?>"
               encytype="multipart/form-data" 
               method="post" class="row">
             <div class="mb-3 col-6"> 
@@ -152,7 +148,7 @@
                 <input type="text" class="form-control" id="nik" name="nik" > 
             </div> 
             <div class="mb-3 col-6"> 
-                <label for="gender" class="form-label">Gender</label> 
+                <label for="gender" class="form-label">Gender</label>   
                 <select name="gender" class="form-select"> 
                     <option value="" selected>Pilih Gender</option> 
                     <option value="Laki-Laki">Laki-Laki</option> 

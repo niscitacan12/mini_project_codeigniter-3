@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
      <style>
             body {
-                background-image : url('https://foto.data.kemdikbud.go.id/getImage/20328986/7.jpg');
+                background-image : url('https://www.atypicalfinance.com/wp-content/uploads/2018/10/Homepage-background.jpg');
                 background-size : cover;
                 background-repeat : no-repeat;
                 background-attachment : fixed;   
@@ -17,22 +17,20 @@
         </style>
 </head>
 <body class="background">
-    <header class="text-white text-center py-4">
+    <header class="text-black text-center py-4">
     <div class="text-center">
          <img src="https://binusasmg.sch.id/ppdb/logobinusa.png" alt="image" height="200px" width="250px" >
         </div>
-        <h1>SMK Bina Nusantara Programer</h1>
-
+        <h1>SMK Bina Nusantara</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    </nav>
+   
     <main class="container mt-4">
         <section class="row">
-            <div class="col-md-4 text-white" >
-                <h2>Tentang SMK</h2>
-                <h3>SMK Bina Nusantara cerdas, cermat, kreatif, berakhlak baik, mandiri, </h3>
+            <div class="col-md-4 text-black" >
+                <h2>Selamat Datang Di Website SMK</h2>
+                <h5>SMK Bina Nusantara cerdas, cermat, kreatif, berakhlak baik, mandiri, </h5>
         </section>
-        <section class="mt-4 text-white" >
+        <section class="mt-4 text-black" >
             <h2>SMK Bina Nusantara Mranggen</h2>
             <ul>
                 <li>jurusan SMK cocok untuk siswa perempuan</li>

@@ -63,13 +63,16 @@
             <i class="fa-solid fa-graduation-cap fa-xl"></i>
                <span class="flex-1 ml-3 whitespace-nowrap">Data Guru</span>
          </li>
-         <li> 
-    <!-- Replaced "Logout" text with a small and transparent image --> 
-             <a href="<?php echo base_url('auth/logout')?>"> 
-                <img src="https://png.pngtree.com/png-vector/20190505/ourmid/pngtree-vector-logout-icon-png-image_1022628.jpg" alt="Logout" style="width: 20px; opacity: 0.5;" /> 
+         <!-- untuk memberikan jarak -->
+      <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+         <div> 
+               <!-- Mengganti teks "Keluar" dengan gambar kecil dan transparan --> 
+             <a href="<?php echo base_url('auth/logout')?>" style="color: #fff; text-decoration: none;"> 
+                <img src="https://png.pngtree.com/png-vector/20190505/ourmid/pngtree-vector-logout-icon-png-image_1022628.jpg" 
+                alt="Logout" style="width: 20px; opacity: 0.5; margin-right: 10px;" /> 
              </a> 
              Logout
-         </li>
+         </div>
       </ul>
    </div>
 </aside>

@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -40,7 +41,9 @@
     <div class="container table-container">
             <table class="table table-striped"> 
             <h1 class="text-center">Data Siswa</h1>
-            <button class="btn btn-sm btn-warning"><a href="Tambah_siswa" class="btn text-primary">Tambah</a> 
+            <a href="<?php echo base_url('admin/tambah_siswa') ?>" class="btn btn-success m-2">
+                <i class="fas fa-plus"></i> Tambah
+            </a>
             </button> 
                 <thead> 
                     <tr> 
@@ -71,10 +74,13 @@
                         </td> 
                         <td> <?php echo tampilan_full_kelas_byid($row->id_kelas) ?></td>
                         <td class="text-center"> 
-                            <a href="<?php echo base_url('admin/update_siswa/').$row->id_siswa?>" 
-                                class="btn btn-primary btn-sm">Ubah</a> 
-                            <button onclick="hapus(<?php echo $row->id_siswa ?>)" 
-                                class="btn btn-danger btn-sm">Hapus</button> 
+                        <a href="<?php echo base_url('admin/update_siswa/') . $row->id_siswa ?>"
+                                class="btn btn-primary">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button onClick="hapus(<?php echo $row->id_siswa; ?>)" class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
                         </td>
  
                     </tr> 
@@ -83,6 +89,7 @@
             </table> 
             </table> 
            
+            <!-- bagian sweet alert -->
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
             <script> 
             function hapus(id) { 

@@ -132,14 +132,7 @@
 </head>
 <body class='min-vh-100 d-flex align-items-center'>
 <div class="card w-50 m-auto p-3"> 
-<div class="navbar"> 
-        <span class="openbtn" onclick="openNav()">&#9776;</span> 
-        <h3 class="text-center text-white">Data Siswa</h3> 
-        <div class="search-container"> 
-            <input type="text" class="search-box" placeholder="Cari..."> 
-            <button type="submit">Cari</button> 
-        </div> 
-    </div> 
+
  
     <!-- Side Navbar (Samping) --> 
     <div class="sidenav" id="mySidenav"> 
